@@ -1,10 +1,10 @@
 bl_info = {  
-    "name": "My Format",  
-    "author": "Your Name",  
+    "name": "Luigi's Mansion MDL Importer",  
+    "author": "PentaChess413",  
     "version": (1, 0),  
-    "blender": (3, 0, 0),  
+    "blender": (5, 0, 0),  
     "location": "File > Import-Export",  
-    "description": "Import-Export MyFormat via subprocess",  
+    "description": "Import (and in the future, export) MDLs via subprocess",  
     "category": "Import-Export",  
 }  
   
@@ -36,8 +36,8 @@ class ImportMyFormat(bpy.types.Operator, ImportHelper):
   
 class ExportMyFormat(bpy.types.Operator, ExportHelper):  
     bl_idname = "export_scene.my_format"  
-    bl_label = "Export MyFormat"  
-    filename_ext = ".myfmt"  
+    bl_label = "(NOT IMPLEMENTED: IT WILL FAIL!!!) Export Luigi's Mansion MDL"  
+    filename_ext = ".mdl"  
     filter_glob: bpy.props.StringProperty(default="*.mdl", options={'HIDDEN'})  
   
     def execute(self, context):  
