@@ -15,7 +15,6 @@ import os  # <-- Add this import
 import shutil
 import pathlib
 from bpy_extras.io_utils import ImportHelper, ExportHelper  
-  
 class ImportMyFormat(bpy.types.Operator, ImportHelper):  
     bl_idname = "import_scene.mdl"  
     bl_label = "Import Luigi's Mansion MDL"  
@@ -113,7 +112,7 @@ def menu_func_import(self, context):
   
 def menu_func_export(self, context):  
     self.layout.operator(ExportMyFormat.bl_idname, text="NOT WORKING!!!")  
-  
+
 classes = (  
     ImportMyFormat,  
     ExportMyFormat,  
