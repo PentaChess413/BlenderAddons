@@ -126,7 +126,8 @@ def register():
   
 def unregister():  
     bpy.types.TOPBAR_MT_file_import.remove(menu_func_import)  
-    bpy.types.TOPBAR_MT_file_export.remove(menu_func_export)  
+    bpy.types.TOPBAR_MT_file_export.remove(menu_func_export)
+    bpy.app.timers.unregister(show_first_run_prompt)  
     for cls in reversed(classes):  
         bpy.utils.unregister_class(cls)  
   
