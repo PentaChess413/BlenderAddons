@@ -12,6 +12,8 @@ import bpy
 import sys  
 import subprocess  
 import os  # <-- Add this import  
+import shutil
+import pathlib
 from bpy_extras.io_utils import ImportHelper, ExportHelper  
   
 class ImportMyFormat(bpy.types.Operator, ImportHelper):  
@@ -24,10 +26,12 @@ class ImportMyFormat(bpy.types.Operator, ImportHelper):
         # Detect platform per-call; avoid class-level code  
         exe = context.preferences.addons[__name__].preferences.mdlconverter_directory
         wrapper = context.preferences.addons[__name__].preferences.collada2gltf_directory
+        pathlib.Path(os.path.splitext(self.filepath)[0]).mkdir(parents=True, exist_ok=True)
         if sys.platform != "win32":  
             subprocess.run(["wine", exe, self.filepath])
         else:
             subprocess.run([exe, self.filepath])
+        shutil.copytree(os.path.join(os.getcwd(), os.path.splitext(os.path.basename(self.filepath))[0]), os.path.splitext(self.filepath)[0], dirs_exist_ok=True)
         subprocess.run([wrapper, f"{os.path.splitext(self.filepath)[0]}/{os.path.splitext(os.path.basename(self.filepath))[0]}.dae"])
         finalpath = f"{os.path.splitext(self.filepath)[0]}/output/{os.path.splitext(os.path.basename(self.filepath))[0]}.gltf"  
         print(finalpath)
@@ -108,7 +112,7 @@ def menu_func_import(self, context):
     self.layout.operator(ImportMyFormat.bl_idname, text="Luigi's Mansion MDL (.mdl)")  
   
 def menu_func_export(self, context):  
-    self.layout.operator(ExportMyFormat.bl_idname, text="My Format (.myfmt)")  
+    self.layout.operator(ExportMyFormat.bl_idname, text="NOT WORKING!!!")  
   
 classes = (  
     ImportMyFormat,  
