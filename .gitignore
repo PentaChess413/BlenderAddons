@@ -2,3 +2,7 @@ __pycache__
 IGNORE_THIS_FOLDER
 .venv
 .vscode
+LMKEYImport
+IGNORE_THIS_TOO
+*.mdl
+*.key

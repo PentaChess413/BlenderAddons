@@ -1,0 +1,7 @@
+2026-02-14 20:23:11,123 INFO [default] s32 WinMain(HINSTANCE, HINSTANCE, LPSTR, s32) [I] Relive:  (GitHub Build: 9) (64 bit)
+2026-02-14 20:23:11,123 INFO [default] s32 WinMain(HINSTANCE, HINSTANCE, LPSTR, s32) [I] Checking AE files are present...
+2026-02-14 20:23:11,123 INFO [default] s32 WinMain(HINSTANCE, HINSTANCE, LPSTR, s32) [I] No AE files found, switch to AO
+2026-02-14 20:23:11,130 INFO [default] GameDirListing()::<lambda(const char_type*, u32)> [I] hr_mdl.mdl
+2026-02-14 20:23:11,131 INFO [default] GameDirListing()::<lambda(const char_type*, u32)> [I] README.md
+2026-02-14 20:23:11,131 INFO [default] GameDirListing()::<lambda(const char_type*, u32)> [I] hr_cnop.key
+2026-02-14 20:23:11,131 INFO [default] GameDirListing()::<lambda(const char_type*, u32)> [I] .gitignore

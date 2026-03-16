@@ -1,3 +1,4 @@
+# DEPRECATED: Superseded by LMMDLImport_New
 # LMMDLImport
 A wrapper for KillzXGaming's MdlConverter because I want to save a few clicks.
 ## Requirements
